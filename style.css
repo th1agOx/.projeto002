@@ -12,7 +12,7 @@
 
 body {
     color: #A54328;
-             /*clamp( min, ideal, max ) */
+             /*clamp( min, ideal, max )*/
     font-size: clamp(1.6rem, 1vw + 0.6rem, 2rem);
     line-height: clamp(2rem, 1vw + 1rem, 2.5rem);
 }
@@ -33,7 +33,7 @@ main {
 .recipe img  {
     width: 100%;
 
-    margin-block: 4.6rem; 
+    margin-block: 4.6rem; /* cria os espaçamentos a partir do top e do botton */
 }
 
 h1, h2 {
@@ -79,6 +79,9 @@ button:hover {
 }
 
 @media(min-width: 1104px) {
+    body{
+        background: url(./image/old-paper-texture-beige-craft-cardboard-vintage-canvas-surface\ 1.jpg);
+    }
     
     main {
         flex-direction: row;
