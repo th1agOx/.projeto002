@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%; /* = 10px */
+
+    font-family: "Source Serif 4", serif;
+}
+
+body {
+    color: #A54328;
+             /*clamp( min, ideal, max ) */
+    font-size: clamp(1.6rem, 1vw + 0.6rem, 2rem);
+    line-height: clamp(2rem, 1vw + 1rem, 2.5rem);
+}
+
+main {
+    max-width: 32rem;
+
+    margin-inline: auto;
+
+    padding: 5.3rem 3.7rem;
+    box-sizing: content-box;  /*o padding não irá interferir no tamanho final do conteudo dentro da caixa*/
+
+    display: flex;
+    flex-direction: column;
+    gap: 3.8rem;
+}
+
+.recipe img  {
+    width: 100%;
+
+    margin-block: 4.6rem; 
+}
+
+h1, h2 {
+    font-size: clamp(2.8rem, 2vw + 1rem, 4rem);
+    line-height: clamp(3.6rem, 2vw + 1rem, 5rem);
+}
+
+h2 {
+    margin-bottom: 3.6rem;
+}
+
+ul {
+    margin-bottom: 2.4rem;
+}
+
+ul,ol {
+    padding-left: 2.4rem;
+}
+
+
+p, li, strong {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+
+button {
+    background: #A54328;
+
+    border: 0;
+    border-radius: .6rem;
+    
+    width: 9.5rem;
+    height: 3.2rem;
+    
+    font-size: 10px;
+    color: #FFFFFF;
+
+    margin-block: 2rem;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+@media(min-width: 1104px) {
+    
+    main {
+        flex-direction: row;
+        gap: 19rem;
+
+        max-width: fit-content;
+        
+        padding: 9rem 14rem;
+    }
+
+    .recipe {
+        max-width: 42.5rem;
+    }
+
+    .ingredients {
+        max-width: 52.5rem;
+    }
+
+    .recipe img {   
+        margin-block: 6.6rem;
+    }
+
+    h2 {
+        margin-bottom: 5rem;
+    }
+
+    button {
+        width: 13.3rem;
+        height: 4.5rem;
+
+        line-height: 2.4rem;
+        font-size: 1.4rem;
+
+        margin-block: 3.6rem;
+    }
+}
+
+
+
+/*
+    webkit - motores dos navegadores: ed, chrome e safari 
+
+    margin-inline - é responsável por alinhar os elementos pelas linhas laterais
+
+    as letras almentarão por conta do rem, e a caixa irá ser responsiva até chegar em 
+    sua largura máxima 
+
+    flex 1 - a largura dos flex se tornará a mesma
+
+    max-width - fit-content: encaixa no tamanho do conteudo 
+
+    o clamp é utilizado para situações com muitos postos de quebra, e em uma 
+    aplicação com muita flexibilidade 
+    o valor ideal no clamp, precisa estar entre o mínimo e o máximo, e precisa ser flexivel.
+    e é uma função responsável por integrar o tamanho dos elementos no mobile first, e no desktop
+*/
